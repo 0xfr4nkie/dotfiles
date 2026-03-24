@@ -32,7 +32,7 @@ compinit
 # End of Docker CLI completions
 
 # Oh My Posh
-eval "$(oh-my-posh init zsh)"
+eval "$(oh-my-posh init zsh --config ~/.dotfiles/.mytheme.omp.json)"
 # End of Oh My Posh
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
