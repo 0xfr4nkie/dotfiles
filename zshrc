@@ -5,6 +5,7 @@
 alias ll='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
+alias brave='open -a "Brave Browser"'
 # Aliases end
 
 # nvm
