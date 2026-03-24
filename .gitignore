@@ -1,0 +1,10 @@
+# IDE
+.idea/
+
+# macOS
+.DS_Store
+
+# Backup files
+*.swp
+*.swo
+*~
