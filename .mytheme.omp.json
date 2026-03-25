@@ -95,7 +95,7 @@
             "display_mode": "context",
             "fetch_virtual_env": true
           },
-          "leading_diamond": "\ue0b6",
+          "leading_diamond": " \ue0b6",
           "trailing_diamond": "\ue0b4",
           "template": "\uE235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }}",
           "foreground": "#FED142",
