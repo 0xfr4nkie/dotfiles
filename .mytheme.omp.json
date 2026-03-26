@@ -23,7 +23,7 @@
           "foreground": "#F5BDE6",
           "background": "#29315A",
           "style": "powerline",
-          "template": " {{ .UserName }}@{{ .HostName }}",
+          "template": " {{ if .SSHSession }}\uEBA9 {{ end }}{{ .UserName }}@{{ .HostName }}",
           "type": "session"
         },
         {
@@ -116,6 +116,14 @@
           "background": "#29315A",
           "type": "python",
           "style": "diamond"
+        },
+        {
+          "type": "time",
+          "style": "plain",
+          "foreground": "#007ACC",
+          "options": {
+            "time_format": "15:04:05"
+          }
         }
       ]
     },
