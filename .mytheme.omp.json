@@ -141,5 +141,10 @@
       "newline": true
     }
   ],
+  "transient_prompt": {
+    "foreground": "#ACB0BE",
+    "template": "➜ ",
+    "newline": true
+  },
   "version": 4
 }
