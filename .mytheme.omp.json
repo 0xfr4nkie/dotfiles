@@ -12,16 +12,30 @@
       "alignment": "left",
       "segments": [
         {
+          "foreground": "#ACB0BE",
+          "background": "#29315A",
+          "leading_diamond": "\ue0b6",
+          "style": "diamond",
+          "template": "{{ .Icon }}",
+          "type": "os"
+        },
+        {
+          "foreground": "#F5BDE6",
+          "background": "#29315A",
+          "style": "powerline",
+          "template": " {{ .UserName }}@{{ .HostName }}",
+          "type": "session"
+        },
+        {
           "options": {
             "style": "mixed"
           },
-          "leading_diamond": "\ue0b6",
-          "trailing_diamond": "\ue0b4",
-          "template": "\ue5ff {{ .Path }}",
+          "powerline_symbol": "\ue0b4",
+          "template": "{{ .Path }}",
           "foreground": "#3EC669",
           "background": "#29315A",
           "type": "path",
-          "style": "diamond"
+          "style": "powerline"
         },
         {
           "options": {
