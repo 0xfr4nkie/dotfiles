@@ -20,15 +20,11 @@ chmod +x makesymlinks.sh
 ## Packages Required (from zshrc)
 
 - zsh
-- oh-my-zsh
-- powerlevel10k
-- vim
-- uv
-- brew (for macOS)
-- sdkman (for managing SDKs)
-- nvm (for managing Node versions)
-- docker
+- nvm
 - pnpm
+- Docker Desktop
+- Oh My Posh
+- vscode shell integration support (`code` command)
 
 ## References
 
