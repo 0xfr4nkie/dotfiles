@@ -22,16 +22,9 @@ case ":$PATH:" in
 esac
 # pnpm end
 
-# VSCode Terminal Intergration
-[[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
-# VSCode Terminal Intergration end
-
-# The following lines have been added by Docker Desktop to enable Docker CLI completions.
-fpath=($HOME/.docker/completions $fpath)
-autoload -Uz compinit
-compinit
-# End of Docker CLI completions
-
 # Oh My Posh
 eval "$(oh-my-posh init zsh --config ~/.dotfiles/.mytheme.omp.json)"
 # End of Oh My Posh
+
+# Added by Antigravity
+export PATH="/Users/diode/.antigravity/antigravity/bin:$PATH"
