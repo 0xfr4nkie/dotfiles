@@ -2,10 +2,9 @@
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Aliases
-alias ll='ls -l'
-alias la='ls -a'
-alias lla='ls -la'
-alias brave='open -a "Brave Browser"'
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
 # Aliases end
 
 # nvm
