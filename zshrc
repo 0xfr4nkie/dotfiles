@@ -34,3 +34,6 @@ export PATH="~/.local/bin:$PATH"
 
 # Added by Antigravity IDE
 export PATH="~/.antigravity-ide/antigravity-ide/bin:$PATH"
+
+# Homebrew
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)"
