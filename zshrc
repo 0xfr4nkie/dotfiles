@@ -28,7 +28,6 @@ eval "$(oh-my-posh init zsh --config ~/.dotfiles/.mytheme.omp.json)"
 # Added by Antigravity
 export PATH="~/.antigravity/antigravity/bin:$PATH"
 
-
 # Added by Antigravity CLI installer
 export PATH="~/.local/bin:$PATH"
 
