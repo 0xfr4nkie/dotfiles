@@ -26,11 +26,11 @@ eval "$(oh-my-posh init zsh --config ~/.dotfiles/.mytheme.omp.json)"
 # End of Oh My Posh
 
 # Added by Antigravity
-export PATH="/Users/diode/.antigravity/antigravity/bin:$PATH"
+export PATH="~/.antigravity/antigravity/bin:$PATH"
 
 
 # Added by Antigravity CLI installer
-export PATH="/Users/diode/.local/bin:$PATH"
+export PATH="~/.local/bin:$PATH"
 
 # Added by Antigravity IDE
-export PATH="/Users/diode/.antigravity-ide/antigravity-ide/bin:$PATH"
+export PATH="~/.antigravity-ide/antigravity-ide/bin:$PATH"
