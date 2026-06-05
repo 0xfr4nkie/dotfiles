@@ -13,14 +13,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 # nvm end
 
-# pnpm
-export PNPM_HOME="$HOME/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-
 # Oh My Posh
 eval "$(oh-my-posh init zsh --config ~/.dotfiles/.mytheme.omp.json)"
 # End of Oh My Posh
@@ -34,5 +26,9 @@ export PATH="$HOME/.local/bin:$PATH"
 # Added by Antigravity IDE
 export PATH="$HOME/.antigravity-ide/antigravity-ide/bin:$PATH"
 
-# Homebrew
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)"
+# Load OS-specific configurations
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  [ -f "$HOME/.dotfiles/zshrc.macos" ] && source "$HOME/.dotfiles/zshrc.macos"
+elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
+  [ -f "$HOME/.dotfiles/zshrc.linux" ] && source "$HOME/.dotfiles/zshrc.linux"
+fi
