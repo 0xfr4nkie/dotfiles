@@ -9,7 +9,7 @@ esac
 # pnpm end
 
 # Homebrew
-echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)"
 
 export YDOTOOL_SOCKET="$HOME/.ydotool_socket"
 

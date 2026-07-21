@@ -19,7 +19,7 @@ eval "$(oh-my-posh init zsh --config ~/.dotfiles/.mytheme.omp.json)"
 
 # Load OS-specific configurations
 if [[ "$OSTYPE" == "darwin"* ]]; then
-  [ -f "$HOME/.dotfiles/zshrc.macos" ] && source "$HOME/.dotfiles/zshrc.macos"
+  [ -f "$HOME/.dotfiles/macos.zshrc" ] && source "$HOME/.dotfiles/macos.zshrc"
 elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
-  [ -f "$HOME/.dotfiles/zshrc.linux" ] && source "$HOME/.dotfiles/zshrc.linux"
+  [ -f "$HOME/.dotfiles/linux.zshrc" ] && source "$HOME/.dotfiles/linux.zshrc"
 fi
