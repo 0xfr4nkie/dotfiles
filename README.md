@@ -41,6 +41,16 @@ Install the following before setup:
 
 The script creates `~/.dotfiles_old` and backs up existing dotfiles before replacing them. It links only the supported home-directory files: `config/shell/zshrc` to `~/.zshrc` and `config/editor/vimrc` to `~/.vimrc`.
 
+## Claude Code config
+
+`config/claude/` holds the global Claude Code instructions (`CLAUDE.md`) and sub-agent definitions (`agents/*.md`). On a new machine, after cloning, run:
+
+```shell
+./scripts/link-claude.sh
+```
+
+The script symlinks `CLAUDE.md` and each agent file individually into `~/.claude/`, creating `~/.claude/` and `~/.claude/agents/` if needed. It never links the whole directory, so machine-local state and other agents are untouched. It is safe to re-run: correct links are skipped, stale links are replaced, and any existing real file is moved to `<name>.bak.<timestamp>` first.
+
 ## Optional: Linux MOTD
 
 On Ubuntu or Debian systems that use `update-motd`, install the custom greeting with:
@@ -67,6 +77,7 @@ The greeting will appear during the next SSH login or login shell when `update-m
 - `config/prompt/theme.omp.json`, the Oh My Posh theme
 - `config/editor/vimrc`, linked as `~/.vimrc`
 - `config/motd/update-motd.d/05-greeting`, the optional Linux login greeting
+- `config/claude/`, the Claude Code global config, linked into `~/.claude/` by `scripts/link-claude.sh`
 - `scripts/makesymlinks.sh`, the symlink installer
 
 ## References
