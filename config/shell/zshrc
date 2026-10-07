@@ -2,11 +2,10 @@
 dotfiles_dir="${DOTFILES_DIR:-$HOME/.dotfiles}"
 
 # Load OS-specific configurations
-if [[ "$OSTYPE" == "darwin"* ]]; then
-  [ -f "$dotfiles_dir/config/shell/macos.zshrc" ] && source "$dotfiles_dir/config/shell/macos.zshrc"
-elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
-  [ -f "$dotfiles_dir/config/shell/linux.zshrc" ] && source "$dotfiles_dir/config/shell/linux.zshrc"
-fi
+case "$OSTYPE" in
+  darwin*) [ -f "$dotfiles_dir/config/shell/macos.zshrc" ] && source "$dotfiles_dir/config/shell/macos.zshrc" ;;
+  linux*)  [ -f "$dotfiles_dir/config/shell/linux.zshrc" ] && source "$dotfiles_dir/config/shell/linux.zshrc" ;;
+esac
 # End of OS-specific configurations
 
 # Aliases
@@ -15,12 +14,24 @@ alias la='ls -A'
 alias l='ls -CF'
 # Aliases end
 
-# nvm
+# nvm (lazy-loaded: nvm.sh is sourced on first use of nvm, node, npm, npx or pnpm)
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+if [ -s "$NVM_DIR/nvm.sh" ]; then
+  _nvm_lazy_load() {
+    unset -f nvm node npm npx pnpm _nvm_lazy_load
+    \. "$NVM_DIR/nvm.sh"
+    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+  }
+  nvm()  { _nvm_lazy_load; nvm "$@"; }
+  node() { _nvm_lazy_load; node "$@"; }
+  npm()  { _nvm_lazy_load; npm "$@"; }
+  npx()  { _nvm_lazy_load; npx "$@"; }
+  pnpm() { _nvm_lazy_load; pnpm "$@"; }
+fi
 # nvm end
 
 # Oh My Posh
-eval "$(oh-my-posh init zsh --config "$dotfiles_dir/config/prompt/theme.omp.json")"
+if command -v oh-my-posh >/dev/null 2>&1; then
+  eval "$(oh-my-posh init zsh --config "$dotfiles_dir/config/prompt/theme.omp.json")"
+fi
 # End of Oh My Posh

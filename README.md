@@ -18,7 +18,7 @@ Install the following before setup:
 1. Clone the repository to the location expected by the installer:
 
    ```shell
-   git clone https://github.com/frankjlin16/dotfiles.git ~/.dotfiles
+   git clone https://github.com/0xfr4nkie/dotfiles.git ~/.dotfiles
    ```
 
 2. Enter the repository:

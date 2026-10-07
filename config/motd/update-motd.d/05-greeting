@@ -3,9 +3,9 @@ GREEN='\033[0;32m'
 BRIGHT_GREEN='\033[1;32m'
 NC='\033[0m' # No Color
 
-echo "${GREEN}"
-echo "░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░"
-echo "░                                                            ░"
+printf '%b\n' "$GREEN"
+printf '%s\n' "░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░"
+printf '%s\n' "░                                                            ░"
 # Note: Using cat << "EOF" to preserve those Unicode diagonal lines
 cat << "EOF"
 ░       ___        __      _  _         _    _               ░
@@ -14,9 +14,9 @@ cat << "EOF"
 ░     │ │_│ │>  <│  _│ │  │__   _│ │ │ │   <│ │  __╱         ░
 ░      ╲___╱╱_╱╲_╲_│ │_│     │_│ │_│ │_│_│╲_╲_│╲___│         ░
 EOF
-echo "░                                                            ░"
-echo "░                      [ ACCESS GRANTED ]                    ░"
-echo "░                  Welcome back, ${BRIGHT_GREEN}0xfr4nkie!${GREEN}                  ░"
-echo "░                                                            ░"
-echo "░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░"
-echo "${NC}"
+printf '%s\n' "░                                                            ░"
+printf '%s\n' "░                      [ ACCESS GRANTED ]                    ░"
+printf '%b\n' "░                  Welcome back, ${BRIGHT_GREEN}0xfr4nkie!${GREEN}                  ░"
+printf '%s\n' "░                                                            ░"
+printf '%s\n' "░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░"
+printf '%b\n' "$NC"

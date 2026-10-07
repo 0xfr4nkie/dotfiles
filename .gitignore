@@ -8,3 +8,13 @@
 *.swp
 *.swo
 *~
+# Local overrides and backups
+*.bak
+*.bak.*
+.claude/
+
+# Secrets
+.env
+.env.*
+*.pem
+*.key
